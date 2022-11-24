@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
+Route::get("/logout", function(){
+    return view("/login");
+});
+
 //Bagian register
 Route::get('/register', function () {
     return view('register');
@@ -47,6 +51,7 @@ Route::prefix("/admin")->group(function (){
         return view("admin.HtambahKamar");
     });
     Route::post("/tambahkamar",[KamarController::class, "tambahkamar"]);
+    Route::get("/detailkamar/{id}", [KamarController::class, "DetailKamar"]);
 
     Route::get("/MasterFasilitas", [FasilitasHotelController::class, "MasterFasilitas"]);
     Route::get("/Htambahfasilitas", function(){

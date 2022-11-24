@@ -21,6 +21,10 @@ return new class extends Migration
             $table->integer("jumlah_penghuni");
             $table->string("tipe_ranjang");
             $table->integer("harga_kamar");
+            $table->string("foto1");
+            $table->string("foto2");
+            $table->string("foto3");
+            $table->string("foto4");
             $table->timestamps();
 
         });

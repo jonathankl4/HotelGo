@@ -6,7 +6,7 @@
 @section("content")
 
 <h1>Tambah Kamar Baru</h1>
-<form action="{{url('/admin/tambahkamar')}}" method="post">
+<form action="{{url('/admin/tambahkamar')}}" method="post" enctype="multipart/form-data">
     @csrf
     Nama Kamar
     <input type="text" class="form-control" style="width: 400px" name="namakamar">
@@ -39,6 +39,23 @@
     <input type="text" class="form-control" style="width: 400px" name="hargakamar">
     <span style="color: red;">{{ $errors->first('hargakamar') }}</span>
     <br>
+    Gambar 1
+    <input type="file" name="foto1">
+    <span style="color: red;">{{ $errors->first('foto1') }}</span>
+    Gambar 2
+    <input type="file" name="foto2">
+    <span style="color: red;">{{ $errors->first('foto2') }}</span>
+    <br>
+    <br>
+    Gamabar 3
+    <input type="file" name="foto3">
+    <span style="color: red;">{{ $errors->first('foto3') }}</span>
+    Gambar 4
+    <input type="file" name="foto4">
+    <span style="color: red;">{{ $errors->first('foto4') }}</span>
+    <br><br>
+
+
     <button class="btn btn-success">Tambah</button>
 
 
@@ -47,6 +64,10 @@
 
 
 </form>
+
+
+
+
 
 @endsection
 

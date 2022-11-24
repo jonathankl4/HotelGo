@@ -41,6 +41,12 @@
                             <a href="{{url('/admin/MasterUser')}}" class="nav-link px-0 align-middle">
                                 <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Master User</span> </a>
                         </li>
+                        <li>
+                            <a href="{{url('/logout')}}" class="nav-link px-0 align-middle">
+                                {{-- <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Master User</span> --}}
+                                <button class="btn btn-danger">Logout</button>
+                             </a>
+                        </li>
                     </ul>
                     <hr>
                     {{-- <div class="dropdown pb-4">

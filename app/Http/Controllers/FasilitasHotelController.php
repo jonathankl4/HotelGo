@@ -46,7 +46,7 @@ class FasilitasHotelController extends Controller
 
     public function deletefasilitas($id){
 
-       
+
         $result = DB::table("fasilitas_hotel")->where("id",'=',$id)->delete();
 
         if ($result) {
