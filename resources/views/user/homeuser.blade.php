@@ -9,7 +9,13 @@
 <body>
     <h1>IKI GARAPANE CHIARI</h1>
     <h2>IKI NJUAJAL MANEHH</h2>
+    sticky header
+    {{-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sticky_header --}}
 
+    seng kudu onok
+    - gambarr"
+    - fasilitas populer
+    -
 
 </body>
 </html>
