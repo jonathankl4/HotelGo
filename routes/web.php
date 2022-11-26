@@ -38,6 +38,10 @@ Route::get('/login', function () {
 });
 Route::post('/loginuser',[loginController::class, "loginAction"]);
 
+Route::get('/user', function () {
+    return view('user.homeuser');
+});
+
 
 Route::prefix("/admin")->group(function (){
 

@@ -7,6 +7,16 @@
     <title>HotelGo</title>
 </head>
 <body>
+    <div style="background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;">
+        <h1>Scroll Down</h1>
+        <p>Scroll down to see the sticky effect.</p>
+    </div>
+
+    @include('layout.navuser')
+
+
     <h1>IKI GARAPANE CHIARI</h1>
     <h2>IKI NJUAJAL MANEHH</h2>
     sticky header
@@ -18,4 +28,20 @@
     -
 
 </body>
+
+<script>
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+    </script>
+
 </html>
