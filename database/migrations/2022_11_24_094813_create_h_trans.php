@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('h_trans', function (Blueprint $table) {
             $table->id();
-            $table->
+            $table->integer("iduser");
             $table->timestamps();
         });
     }

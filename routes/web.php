@@ -5,6 +5,7 @@ use App\Http\Controllers\KamarController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,10 +39,10 @@ Route::get('/login', function () {
 });
 Route::post('/loginuser',[loginController::class, "loginAction"]);
 
-Route::get('/anjay', function () {
+Route::get('/user', function () {
     // dd("anjay ggbet");
-
-    return view("user.dashboard");
+    $data = DB::table('kamar')->get();
+    return view("user.dashboard", ["kamar"=>$data]);
 });
 
 
