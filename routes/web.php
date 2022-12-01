@@ -3,6 +3,7 @@
 use App\Http\Controllers\FasilitasHotelController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\DB;
@@ -44,6 +45,8 @@ Route::get('/user', function () {
     $data = DB::table('kamar')->get();
     return view("user.dashboard", ["kamar"=>$data]);
 });
+
+Route::post('/pesan',[PesanController::class, "pilihkamar"]);
 
 
 Route::prefix("/admin")->group(function (){

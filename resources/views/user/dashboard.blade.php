@@ -23,6 +23,17 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#kamar">Kamar</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#akomodasi">Tentang Akomodasi</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#fasitas">Fasilitas</a></li>
+                    <li class="dropdown nav-item" role="presentation">
+                        <a href="" class=" dropdown-toggle nav-link" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Akun
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Profile</a>
+                          <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
+
+                        </div>
+                    </li>
+
                 </ul>
             </div>
         </div>
@@ -77,63 +88,107 @@
                         <p>Parkiran Luas</p>
                         <p>AC</p>
                     </div>
-                    <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"></a>
+                    <div class="col-md-6 col-lg-4 item zoom-on-hover" id="lokasi"><a href="#"></a>
                         <p>Penyimpanan Barang</p>
                         <p>Fasilitas Rapat</p>
                         <p>Fasiltas Ramah Difabel</p>
                     </div>
                 </div>
-                <div class="heading" id="lokasi">
+                <div class="heading" id="kamar">
                     <h2>Lokasi</h2>
                 </div>
                 {{-- <h1 style="margin: 36px;padding: 0px;">Lokasi</h1> --}}
                 <p>Jalan Ambengan No 14 , Ketapang , Kec Genteng, KOta SBY, Jawa Timur 60272<br>Link Google Maps:&nbsp;<a href="{{url('https://goo.gl/maps/aS9ue1k5j4ogVNrc7')}}">https://goo.gl/maps/aS9ue1k5j4ogVNrc7</a> </p>
                 <!-- Start: portfolio heading -->
                 <div class="heading" id="kamar">
-                    <h2>Pilihan Kamar</h2>
-                    <table class="table">
-                        <thead>
+                    <form action="/pesan" method="post">
+                        @csrf
+                        <div class="row no-gutters">
+                            <div class="col-md-6 col-lg-4 item ">
+                                <p>Check-in</p>
 
-                        </thead>
-                        <tbody>
-                            @for ($i = 0; $i < count($kamar);$i++)
+                                <input type="date" name="dcheckin" class="form-control" style="width: 200px">
 
-                                <tr>
-                                    <td style="width: 200px" ><img src="{{asset('/storage/gambar/'.$kamar[$i]->foto1)}}" width="300px" height="200px"></td>
-                                    <td style="padding-left: 0px; ">
-                                        <b style="font-size: 25px">{{$kamar[$i]->nama_kamar}}</b>
-                                        <br><br>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item ">
+                                <p>Check-out</p>
 
-                                        {{-- <img src="{{url('/images/breakfast.png')}}" height="30px" width="30px"> 1 {{$kamar[$i]->tipe_ranjang}} Bed
-                                        <br><br> --}}
-                                        <img src="{{url('/images/bed.png')}}" height="30px" width="30px"> 1 {{$kamar[$i]->tipe_ranjang}} Bed
-                                        <br>
-                                        <br>
-                                        <img src="{{url('/images/user.png')}}" height="25px" width="25px"> {{$kamar[$i]->jumlah_penghuni}} Tamu
+                                <input type="date" name="dcheckout" class="form-control" style="width: 200px">
 
-                                    </td>
-                                    <td>
-                                        <a href="">Lihat Detail</a>
-                                        <br>
-                                        <br>
-                                        <b style="color: red">IDR {{number_format($kamar[$i]->harga_kamar)}}</b>
-                                        <br>
-                                        per kamar per malam
-                                        <br>
-                                        <button class="btn btn-success">PILIH</button>
-                                    </td>
+                            </div>
+                            <div class="col-md-6 col-lg-4 item ">
+                                Jumlah Kamar dan Tamu
+                                <br>
+                                kamar
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                &nbsp;
+                                tamu
+                                <div class="d-flex">
 
 
+                                    <input type="text" name="kamar" class="form-control" style="width: 100px">
+                                    &nbsp;
+                                    &nbsp;
+                                    &nbsp;
+                                    <input type="text" name="tamu" class="form-control" style="width: 100px">
+                                </div>
+                            </div>
 
-                                </tr>
-                            @endfor
+                        </div>
+                        <h2>Pilihan Kamar</h2>
+                        <table class="table">
+                            <thead>
 
-                        </tbody>
-                      </table>
+                            </thead>
+                            <tbody>
+                                @for ($i = 0; $i < count($kamar);$i++)
+
+                                    <tr>
+                                        <td style="width: 200px" ><img src="{{asset('/storage/gambar/'.$kamar[$i]->foto1)}}" width="300px" height="200px"></td>
+                                        <td style="padding-left: 0px; ">
+                                            <b style="font-size: 25px">{{$kamar[$i]->nama_kamar}}</b>
+                                            <br><br>
+
+                                            {{-- <img src="{{url('/images/breakfast.png')}}" height="30px" width="30px"> 1 {{$kamar[$i]->tipe_ranjang}} Bed
+                                            <br><br> --}}
+                                            <img src="{{url('/images/bed.png')}}" height="30px" width="30px"> 1 {{$kamar[$i]->tipe_ranjang}} Bed
+                                            <br>
+                                            <br>
+                                            <img src="{{url('/images/user.png')}}" height="25px" width="25px"> {{$kamar[$i]->jumlah_penghuni}} Tamu
+
+                                        </td>
+                                        <td>
+                                            <a href="">Lihat Detail</a>
+                                            <br>
+                                            <br>
+                                            <b style="color: red">IDR {{number_format($kamar[$i]->harga_kamar)}}</b>
+                                            <br>
+                                            per kamar per malam
+                                            <br>
+                                            <a href="{{url('/pilihkamar/'.$kamar[$i]->id)}}"><button class="btn btn-success" name="btnpilih" value={{$kamar[$i]->id}} >PILIH</button></a>
+                                        </td>
+
+
+
+                                    </tr>
+                                @endfor
+
+                            </tbody>
+                        </table>
+                    </form>
                 </div>
                 <!-- End: portfolio heading -->
+                <div id="akomodasi"></div>
+                <br><br>
                 <h1>Tentang Akomodasi</h1>
-                <div class="row no-gutters" id="akomodasi">
+                <div class="row no-gutters" >
                     <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"></a>
                         <p>Waktu Checkin &amp; chekout</p>
                     </div>
