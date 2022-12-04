@@ -12,8 +12,8 @@
 
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-secondary">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 ">
                     <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                         <span class="fs-5 d-none d-sm-inline">Menu</span>
                     </a>
@@ -25,21 +25,25 @@
                         </li> --}}
                         <li class="nav-item">
                             <a href="{{url('/admin/')}}" class="nav-link align-middle px-0">
-                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span>
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Dashboard</span>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="{{url('/admin/MasterKamar')}}" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Kamar</span> </a>
+                        <li class="nav-item">
+                            <a href="{{url('/admin/MasterKamar')}}" class="nav-link px-0 align-middle ">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Kamar</span> </a>
                         </li>
                         <li>
                             <a href="{{url('/admin/MasterFasilitas')}}" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Fasilitas</span> </a>
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Fasilitas</span> </a>
                         </li>
                         <li>
                             <a href="{{url('/admin/MasterUser')}}" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Master User</span> </a>
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Master User</span> </a>
+                        </li>
+                        <li>
+                            <a href="{{url('/admin/MasterUser')}}" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Pesanan</span> </a>
                         </li>
                         <li>
                             <a href="{{url('/logout')}}" class="nav-link px-0 align-middle">

@@ -16,6 +16,11 @@ return new class extends Migration
         Schema::create('h_trans', function (Blueprint $table) {
             $table->id();
             $table->integer("iduser");
+            $table->integer("idkamar");
+            $table->date("checkin");
+            $table->date("chechkout");
+            $table->integer("total");
+            $table->string("metode_pembayaran");
             $table->timestamps();
         });
     }

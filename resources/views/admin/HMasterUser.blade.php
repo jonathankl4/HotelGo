@@ -26,7 +26,7 @@
             <td>{{$data[$i]->name}}</td>
             <td>{{$data[$i]->email}}</td>
             <td>
-                <a href="{{url('/admin/deletefasilitas/'.$data[$i]->id)}}"><button>Delete</button></a>
+                <a href="{{url('/admin/deletefasilitas/'.$data[$i]->id)}}"><button class="btn btn-danger">Delete</button></a>
                 {{-- <button type="submit" class="show_confirm">Delte</button> --}}
             </td>
         </tr>

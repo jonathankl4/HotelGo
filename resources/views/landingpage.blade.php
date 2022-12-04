@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Agency - Start Bootstrap Theme</title>
+        <title>HotelGo</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -27,8 +27,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#services"><b>Services</b> </a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about"><b>About</b></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services"><b>Pelayanan</b> </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tentang"><b>Tentang</b></a></li>
                         <li class="nav-item"><a class="nav-link" href={{url("/login")}}><b>Masuk</b></a></li>
                         <li class="nav-item"><a class="nav-link" href={{url("/register")}}><button class="btn btn-success">Daftar</button></a></li>
 
@@ -39,7 +39,7 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Hi , Mau Bermalam dimana?</div>
+                <div class="masthead-subheading">Hi , Mau Bermalam ?</div>
                 <div class="masthead-heading text-uppercase">Semua dijamin lebih murah</div>
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
             </div>
@@ -49,7 +49,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Services</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    {{-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> --}}
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -82,9 +82,9 @@
         <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <div class="text-center" id="tentang">
+                    <h2 class="section-heading text-uppercase">HotelGo</h2>
+                    {{-- <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> --}}
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -94,12 +94,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <img class="img-fluid" src="images/hotel1.jpg" alt="..." style="height: 300px;width: 400px" />
                             </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Threads</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
-                            </div>
+                            {{-- <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Halaman depan</div>
+                                <div class="portfolio-caption-subheading text-muted">Hotel</div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -109,12 +109,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid" src="images/hotel2.jpg" alt="..." style="height: 300px;width: 400px" />
                             </a>
-                            <div class="portfolio-caption">
+                            {{-- <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Explore</div>
                                 <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -124,12 +124,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <img class="img-fluid" src="images/hotel3.jpg" alt="..." style="height: 300px;width: 400px" />
                             </a>
-                            <div class="portfolio-caption">
+                            {{-- <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Finish</div>
                                 <div class="portfolio-caption-subheading text-muted">Identity</div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
@@ -139,12 +139,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <img class="img-fluid" src="images/hotel4.jpg" alt="..." style="height: 300px;width: 400px" />
                             </a>
-                            <div class="portfolio-caption">
+                            {{-- <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Lines</div>
                                 <div class="portfolio-caption-subheading text-muted">Branding</div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
@@ -154,12 +154,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <img class="img-fluid" src="images/hotel5.jpg" alt="..." style="height: 300px;width: 400px" />
                             </a>
-                            <div class="portfolio-caption">
+                            {{-- <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Southwest</div>
                                 <div class="portfolio-caption-subheading text-muted">Website Design</div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
@@ -169,12 +169,12 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid" src="images/hotel6.jpg" alt="..." style="height: 300px;width: 400px" />
                             </a>
-                            <div class="portfolio-caption">
+                            {{-- <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Window</div>
                                 <div class="portfolio-caption-subheading text-muted">Photography</div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -274,11 +274,11 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
+                                    {{-- <h2 class="text-uppercase">Project Name</h2> --}}
+                                    {{-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                    <img class="img-fluid d-block mx-auto" src="images/hotel1.jpg" alt="..." />
+                                    {{-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> --}}
+                                    {{-- <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
                                             Threads
@@ -287,10 +287,10 @@
                                             <strong>Category:</strong>
                                             Illustration
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -309,11 +309,11 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
+                                    {{-- <h2 class="text-uppercase">Project Name</h2> --}}
+                                    {{-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                    <img class="img-fluid d-block mx-auto" src="images/hotel2.jpg" alt="..." />
+                                    {{-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> --}}
+                                    {{-- <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
                                             Explore
@@ -322,10 +322,10 @@
                                             <strong>Category:</strong>
                                             Graphic Design
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -344,10 +344,10 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                    {{-- <h2 class="text-uppercase">Project Name</h2>
+                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                    <img class="img-fluid d-block mx-auto" src="images/hotel3.jpg" alt="..." />
+                                    {{-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
                                     <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
@@ -357,10 +357,10 @@
                                             <strong>Category:</strong>
                                             Identity
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -379,11 +379,11 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
+                                    {{-- <h2 class="text-uppercase">Project Name</h2> --}}
+                                    {{-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                    <img class="img-fluid d-block mx-auto" src="images/hotel4.jpg" alt="..." />
+                                    {{-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> --}}
+                                    {{-- <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
                                             Lines
@@ -392,10 +392,10 @@
                                             <strong>Category:</strong>
                                             Branding
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -414,11 +414,11 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
+                                    {{-- <h2 class="text-uppercase">Project Name</h2> --}}
+                                    {{-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                    <img class="img-fluid d-block mx-auto" src="images/hotel5.jpg" alt="..." />
+                                    {{-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> --}}
+                                    {{-- <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
                                             Southwest
@@ -427,10 +427,10 @@
                                             <strong>Category:</strong>
                                             Website Design
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -449,11 +449,11 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
+                                    {{-- <h2 class="text-uppercase">Project Name</h2> --}}
+                                    {{-- <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p> --}}
+                                    <img class="img-fluid d-block mx-auto" src="images/hotel6.jpg" alt="..." />
+                                    {{-- <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p> --}}
+                                    {{-- <ul class="list-inline">
                                         <li>
                                             <strong>Client:</strong>
                                             Window
@@ -462,10 +462,10 @@
                                             <strong>Category:</strong>
                                             Photography
                                         </li>
-                                    </ul>
+                                    </ul> --}}
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                        Close
                                     </button>
                                 </div>
                             </div>

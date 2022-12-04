@@ -41,9 +41,10 @@
             <img src="{{asset('/storage/gambar/'.$dk->foto1)}}" class="card-img-top" height="200px" width="600px">
             <div class="card-body">
               <h5 class="card-title">{{$dk->nama_kamar}}</h5>
-              <p class="card-text">Check in :</p>
-              <p class="card-text">Check out :</p>
-              <p class="card-text">Total :</p>
+              <p class="card-text">{{$detail->hari}} malam , {{$detail->tamu}} tamu</p>
+              <p class="card-text">Check in : {{$detail->dcheckin}}</p>
+              <p class="card-text">Check out : {{$detail->dcheckout}}</p>
+              <p class="card-text">Total :{{number_format($detail->jkamar*$dk->harga_kamar)}} </p>
 
 
             </div>
@@ -51,6 +52,7 @@
         </div>
 
         <div style="margin-left: 0px">
+          <form action="" method="post">
             <h2>Detail Pemesanan</h2>
             <div class="d-flex">
                 <div>
@@ -93,7 +95,7 @@
 
             <h2>Detail Tamu</h2>
 
-            @for ($i = 0;$i < $jkamar;$i++)
+            @for ($i = 0;$i < $detail->jkamar;$i++)
 
                 <div>
                     <h4>Kamar {{$i+1}}</h4>
@@ -129,7 +131,7 @@
             @endfor
 
             <button class="btn btn-warning">Lanjut Pembayaran</button>
-
+          </form>
 
 
         </div>

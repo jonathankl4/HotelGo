@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get("/logout", function(){
-    return view("/login");
+    return view("/landingpage");
 });
 
 //Bagian register
@@ -43,7 +43,16 @@ Route::post('/loginuser',[loginController::class, "loginAction"]);
 Route::get('/user', function () {
     // dd("anjay ggbet");
     $data = DB::table('kamar')->get();
-    return view("user.dashboard", ["kamar"=>$data]);
+    $termurah = DB::table('kamar')->select(DB::raw('MIN(harga_kamar) as ht'))->first();
+
+    // dd($termurah);
+    return view("user.dashboard", ["kamar"=>$data ,"termurah"=>$termurah]);
+
+    // $users = DB::table('users')
+    //          ->select(DB::raw('count(*) as user_count, status'))
+    //          ->where('status', '<>', 1)
+    //          ->groupBy('status')
+    //          ->get();
 });
 
 Route::post('/pesan',[PesanController::class, "pilihkamar"]);

@@ -31,7 +31,7 @@
             <td>{{$data[$i]->tipe_ranjang}}</td>
             <td>{{$data[$i]->harga_kamar}}</td>
             <td>
-                <a href="{{url('/admin/detailkamar/'.$data[$i]->id)}}"><button>Detail</button></a>
+                <a href="{{url('/admin/detailkamar/'.$data[$i]->id)}}"><button class="btn btn-warning">Foto Kamar</button></a>
             </td>
         </tr>
       @endfor

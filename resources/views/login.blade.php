@@ -14,8 +14,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    {{-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/navbar-tulisan2.png" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#services"><b>Pelayanan</b> </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><b>Tentang</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href={{url("/login")}}><b>Masuk</b></a></li>
+                    <li class="nav-item"><a class="nav-link" href={{url("/register")}}><button class="btn btn-success">Daftar</button></a></li>
 
+                </ul>
+            </div>
+        </div>
+    </nav> --}}
     <div class="main">
+
 
         <section class="signup">
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
@@ -25,7 +43,7 @@
                         @csrf
                         <h2 class="form-title">Login</h2>
                         <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Email"/>
                             <span style="color: red;">{{ $errors->first('email') }}</span>
                         </div>
                         <div class="form-group">
@@ -39,7 +57,7 @@
                         </div>
                     </form>
                     <p class="loginhere">
-                        Haven't sign up ? <a href="/register" class="loginhere-link">Sign up here</a>
+                        Belum punya akun? <a href="/register" class="loginhere-link">Daftar Di sini</a>
                     </p>
                 </div>
             </div>

@@ -29,6 +29,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" href="#">Profile</a>
+                          <a class="dropdown-item" href="#">Pesanan</a>
                           <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
 
                         </div>
@@ -67,7 +68,7 @@
         <section class="portfolio-block call-to-action border-bottom">
             <div class="container">
                 <div class="d-flex justify-content-center align-items-center content">
-                    <h3>Mulai Dari IDR 200.000/malam</h3>&nbsp;&nbsp;<a href="#kamar"><button class="btn btn-outline-primary btn-lg" type="button">Lihat Kamar</button></a></div>
+                    <h3>Mulai Dari IDR {{number_format($termurah->ht)}}/malam</h3>&nbsp;&nbsp;<a href="#kamar"><button class="btn btn-outline-primary btn-lg" type="button">Lihat Kamar</button></a></div>
             </div>
         </section>
         <section class="portfolio-block skills">
@@ -233,7 +234,7 @@
                     </div>
                 </div>
                 <br>
-                <div class="row no-gutters" >
+                {{-- <div class="row no-gutters" >
                     <div class="col-md-6 col-lg-4 item zoom-on-hover"><a href="#"></a>
                         <b>Fasilitas</b>
                         <p>Fasilitas Popular</p>
@@ -242,7 +243,7 @@
                         <p>Jenis</p>
 
                     </div>
-                </div>
+                </div> --}}
             </div>
 
         </section>
