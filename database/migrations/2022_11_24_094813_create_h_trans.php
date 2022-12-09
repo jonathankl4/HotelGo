@@ -21,6 +21,9 @@ return new class extends Migration
             $table->date("chechkout");
             $table->integer("total");
             $table->string("metode_pembayaran");
+            $table->string("nama_pemesan");
+            $table->string("nomor_pemesan");
+            $table->string("email");
             $table->timestamps();
         });
     }

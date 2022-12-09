@@ -44,7 +44,7 @@
               <p class="card-text">{{$detail->hari}} malam , {{$detail->tamu}} tamu</p>
               <p class="card-text">Check in : {{$detail->dcheckin}}</p>
               <p class="card-text">Check out : {{$detail->dcheckout}}</p>
-              <p class="card-text">Total :{{number_format($detail->jkamar*$dk->harga_kamar)}} </p>
+              <p class="card-text">Total :{{number_format($detail->total)}} </p>
 
 
             </div>
@@ -52,12 +52,13 @@
         </div>
 
         <div style="margin-left: 0px">
-          <form action="" method="post">
+          <form action="/pembayaran" method="post">
+            @csrf
             <h2>Detail Pemesanan</h2>
             <div class="d-flex">
                 <div>
 
-                    <select name="" id="" class="form-select" style="width: 100px; height: 40px;">
+                    <select name="titlepemesan" id="" class="form-select" style="width: 100px; height: 40px;">
                         <option value="">Tuan</option>
                         <option value="">Nyonya</option>
                         <option value="">Nona</option>
@@ -70,7 +71,7 @@
                 &nbsp;
                 <div>
 
-                    <input type="text" placeholder="Nama" class="form-control" style="width: 400px; height: 40px;">
+                    <input type="text" placeholder="Nama" name="namapemesan" class="form-control" style="width: 400px; height: 40px;" value="{{$userLog->name}}">
                     <label for="">Sesuai di KTP/Paspor/SIM</label>
 
                 </div>
@@ -80,7 +81,7 @@
             <br>
             <div class="d-flex">
                 <div>
-                    <input type="text" placeholder="Nomor Telepon" class="form-control" style="width: 400px; height: 40px;">
+                    <input type="text" placeholder="Nomor Telepon" name="notelp" class="form-control" style="width: 400px; height: 40px;">
                     Nomor Telepon
                 </div>
 
@@ -88,7 +89,7 @@
             </div>
             <br>
             <div>
-                <input type="text" placeholder="Alamat Email" class="form-control">
+                <input type="text" placeholder="Alamat Email" name="email" class="form-control" value="{{$userLog->email}}">
                 <label for="">Email</label>
             </div>
             <br><br>
@@ -103,7 +104,7 @@
                     <div class="d-flex">
                         <div>
 
-                            <select name="" id="" class="form-select" style="width: 100px; height: 40px;">
+                            <select name="title[]" id="" class="form-select" style="width: 100px; height: 40px;">
                                 <option value="">Tuan</option>
                                 <option value="">Nyonya</option>
                                 <option value="">Nona</option>
@@ -116,7 +117,7 @@
                         &nbsp;
                         <div>
 
-                            <input type="text" placeholder="Nama" class="form-control" style="width: 400px; height: 40px;">
+                            <input type="text" placeholder="Nama" name="nama[]" class="form-control" style="width: 400px; height: 40px;">
                             <label for="">Sesuai di KTP/Paspor/SIM</label>
 
                         </div>
@@ -124,12 +125,21 @@
 
 
                     </div>
+                    <br>
+                    <h4>Pesanan Tambahan</h4>
+                    <div>
+                        <input type="checkbox" name="bed{{$i}}" id=""> Bed tambahan (IDR 100.000)
+                        <br>
+                        {{-- <input type="checkbox" name="pemandangan" id=""> Pemandangan Kolam Renang (IDR 50.000) --}}
+                    </div>
                     <br><br>
 
                 </div>
 
             @endfor
 
+
+            <br><br>
             <button class="btn btn-warning">Lanjut Pembayaran</button>
           </form>
 

@@ -8,6 +8,7 @@ use App\Http\Controllers\registerController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,8 @@ Route::post('/loginuser',[loginController::class, "loginAction"]);
 
 Route::get('/user', function () {
     // dd("anjay ggbet");
+
+    // dd(Session::get("userLog"));
     $data = DB::table('kamar')->get();
     $termurah = DB::table('kamar')->select(DB::raw('MIN(harga_kamar) as ht'))->first();
 
@@ -56,6 +59,7 @@ Route::get('/user', function () {
 });
 
 Route::post('/pesan',[PesanController::class, "pilihkamar"]);
+Route::post("/pembayaran",[PesanController::class, "pembayaran"]);
 
 
 Route::prefix("/admin")->group(function (){

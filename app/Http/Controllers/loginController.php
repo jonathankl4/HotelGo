@@ -35,6 +35,7 @@ class loginController extends Controller
                 return redirect('/admin')->with('msg', 'Berhasil Login sebagai admin');
             }
             else{
+                Session::put("userLog", $user);
                 return redirect('/user')->with('msg', 'Berhasil Login sebagai user');
             }
 
