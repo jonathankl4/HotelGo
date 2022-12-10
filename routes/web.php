@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FasilitasHotelController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\loginController;
@@ -67,7 +68,11 @@ Route::get("/riwayattransaksi",[UserController::class,"riwayatpesanan"]);
 Route::prefix("/admin")->group(function (){
 
     Route::get("/", function(){
-        return view("admin.dashboard");
+
+        $dk = DB::table("no_kamar")->where("status_kamar",'=','terisi')->get();
+        $du = DB::table("users")->where("role",'=','1')->get();
+        $dp = DB::table("h_trans")->where("status_trans",'=','pending')->get();
+        return view("admin.dashboard",["kamarterisi" => $dk,"jumlahuser"=>$du,"jumlahtrans"=>$dp]);
         // return view("admin.HMasterKamar");
     });
     Route::get("/MasterKamar", [KamarController::class, "MasterKamar"]);
@@ -86,4 +91,10 @@ Route::prefix("/admin")->group(function (){
     Route::get("/deletefasilitas/{id}", [FasilitasHotelController::class, "deletefasilitas"]);
 
     Route::get("/MasterUser", [UserController::class, "MasterUser"]);
+
+    Route::get("pesanan",[AdminController::class, "pesanan"]);
+    Route::get("selesaikanpesanan/{id}",[AdminController::class, "selesaikanpesanan"]);
+    Route::get("/laporanpendapatan",[AdminController::class , "laporanpendapatan"]);
+    Route::get("/Flaporanpendapatan",[AdminController::class , "Flaporanpendapatan"]);
+
 });
