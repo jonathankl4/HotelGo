@@ -134,6 +134,7 @@ class KamarController extends Controller
                 $nok = new noKamar();
                 $nok->idkamar = $nk->id;
                 $nok->kode_kamar = $kode.$i;
+                $nok->status_kamar = "kosong";
                 $nok->save();
 
             }

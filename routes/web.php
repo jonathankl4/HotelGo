@@ -60,6 +60,8 @@ Route::get('/user', function () {
 
 Route::post('/pesan',[PesanController::class, "pilihkamar"]);
 Route::post("/pembayaran",[PesanController::class, "pembayaran"]);
+Route::post("/bayar", [PesanController::class, "bayar"]);
+Route::get("/riwayattransaksi",[UserController::class,"riwayatpesanan"]);
 
 
 Route::prefix("/admin")->group(function (){

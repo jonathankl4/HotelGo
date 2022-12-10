@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer("iduser");
             $table->integer("idkamar");
             $table->date("checkin");
-            $table->date("chechkout");
+            $table->date("checkout");
             $table->integer("total");
             $table->string("metode_pembayaran");
             $table->string("nama_pemesan");

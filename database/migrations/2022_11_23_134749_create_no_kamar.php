@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer("idkamar");
             $table->string("kode_kamar");
+            $table->string("status_kamar");
             $table->timestamps();
         });
     }

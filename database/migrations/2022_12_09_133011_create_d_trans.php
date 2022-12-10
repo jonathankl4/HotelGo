@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('d_trans', function (Blueprint $table) {
             $table->id();
+            $table->integer("idhtrans");
             $table->string("nama_tamu");
             $table->string("d_kode_kamar");
-            $table->integer("tambah_bed");
+            $table->string("tambah_bed");
             $table->timestamps();
         });
     }

@@ -35,7 +35,7 @@
 
       <div style="padding: 50px" class="d-flex">
 
-        <div style="position: fixed; margin-left: 800px">
+        <div style="position: fixed; margin-left: 800px; margin-top: -40px">
           <h1>Detail Pemesanan</h1>
           <div class="card" style="width: 20rem;">
             <img src="{{asset('/storage/gambar/'.$dk->foto1)}}" class="card-img-top" height="200px" width="600px">
@@ -128,7 +128,7 @@
                     <br>
                     <h4>Pesanan Tambahan</h4>
                     <div>
-                        <input type="checkbox" name="bed{{$i}}" id=""> Bed tambahan (IDR 100.000)
+                        <input type="checkbox" name="bed[]" id=""> Bed tambahan (IDR 100.000)
                         <br>
                         {{-- <input type="checkbox" name="pemandangan" id=""> Pemandangan Kolam Renang (IDR 50.000) --}}
                     </div>
