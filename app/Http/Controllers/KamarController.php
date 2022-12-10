@@ -28,9 +28,7 @@ class KamarController extends Controller
                 "jumlahpenghuni" => "required|integer|min:1",
                 "hargakamar" => "required|integer|min:1",
                 "foto1" => "required",
-                "foto2" => "required",
-                "foto3" => "required",
-                "foto4" => "required",
+
 
             ],
             [
@@ -40,14 +38,48 @@ class KamarController extends Controller
             ]
         )) {
             # code...
-            $foto1 = $req->file("foto1");
-            $foto2 = $req->file("foto2");
-            $foto3 = $req->file("foto3");
-            $foto4 = $req->file("foto4");
-            $namaFileGambar1  = Str::random(8).".".$foto1->getClientOriginalExtension();
-            $namaFileGambar2  = Str::random(8).".".$foto2->getClientOriginalExtension();
-            $namaFileGambar3  = Str::random(8).".".$foto3->getClientOriginalExtension();
-            $namaFileGambar4  = Str::random(8).".".$foto4->getClientOriginalExtension();
+
+
+            $foto1 = "";
+            $foto2 = "";
+            $foto3 = "";
+            $foto4 = "";
+            $namaFileGambar1  = "";
+            $namaFileGambar2  = "";
+            $namaFileGambar3  = "";
+            $namaFileGambar4  = "";
+
+            try {
+                //code...
+                $foto1 = $req->file("foto1");
+                $namaFileGambar1  = Str::random(8).".".$foto1->getClientOriginalExtension();
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+
+            try {
+                //code...
+                $foto2 = $req->file("foto2");
+                $namaFileGambar2  = Str::random(8).".".$foto2->getClientOriginalExtension();
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+
+            try {
+                //code...
+                $foto3 = $req->file("foto3");
+                $namaFileGambar3  = Str::random(8).".".$foto3->getClientOriginalExtension();
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+            try {
+                //code...
+                $foto4 = $req->file("foto4");
+                $namaFileGambar4  = Str::random(8).".".$foto4->getClientOriginalExtension();
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+
 
 
 
@@ -71,10 +103,30 @@ class KamarController extends Controller
 
             $namaFolderPhoto = "gambar/";
             // storeAs akan menyimpan default ke local
-            $foto1->storeAs($namaFolderPhoto,$namaFileGambar1, 'public');
-            $foto2->storeAs($namaFolderPhoto,$namaFileGambar2, 'public');
-            $foto3->storeAs($namaFolderPhoto,$namaFileGambar3, 'public');
-            $foto4->storeAs($namaFolderPhoto,$namaFileGambar4, 'public');
+            try {
+                //code...
+                $foto1->storeAs($namaFolderPhoto,$namaFileGambar1, 'public');
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+            try {
+                //code...
+                $foto2->storeAs($namaFolderPhoto,$namaFileGambar2, 'public');
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+            try {
+                //code...
+                $foto3->storeAs($namaFolderPhoto,$namaFileGambar3, 'public');
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
+            try {
+                //code...
+                $foto4->storeAs($namaFolderPhoto,$namaFileGambar4, 'public');
+            } catch (\Throwable $th) {
+                //throw $th;
+            }
 
 
             for ($i=0; $i < $req->jumlahkamar ; $i++) {
@@ -82,6 +134,7 @@ class KamarController extends Controller
                 $nok = new noKamar();
                 $nok->idkamar = $nk->id;
                 $nok->kode_kamar = $kode.$i;
+                $nok->status_kamar = "kosong";
                 $nok->save();
 
             }

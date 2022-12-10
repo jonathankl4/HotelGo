@@ -15,7 +15,15 @@ return new class extends Migration
     {
         Schema::create('h_trans', function (Blueprint $table) {
             $table->id();
-            $table->
+            $table->integer("iduser");
+            $table->integer("idkamar");
+            $table->date("checkin");
+            $table->date("checkout");
+            $table->integer("total");
+            $table->string("metode_pembayaran");
+            $table->string("nama_pemesan");
+            $table->string("nomor_pemesan");
+            $table->string("email");
             $table->timestamps();
         });
     }

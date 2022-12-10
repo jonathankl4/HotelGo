@@ -16,4 +16,10 @@ class UserController extends Controller
         return view("admin.HMasterUser",["data"=> $data]);
     }
 
+    public function riwayatpesanan(){
+
+
+        return view("user.pesanan");
+    }
+
 }

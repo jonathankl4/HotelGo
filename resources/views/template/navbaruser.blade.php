@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HotelGo</title>
+    <title>Document</title>
 </head>
 <body>
+
     <div style="background-color: #f1f1f1;
     padding: 30px;
     text-align: center;">
@@ -22,16 +22,16 @@ color: #f1f1f1;" id="myHeader">
 
     <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('homeuser') }}">Home</a>
+          <a class="nav-link" href="{{ url('homeuser') }}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('profileuser') }}">Profile</a>
+          <a class="nav-link" href="{{ url('profileuser') }}">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('pricinguser') }}">Pricing</a>
+          <a class="nav-link" href="{{ url('pricinguser') }}">Pricing</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('aboutuser') }}">About Us</a>
+          <a class="nav-link" href="{{ url('aboutuser') }}">About Us</a>
         </li>
       </ul>
 </div>
@@ -43,28 +43,26 @@ color: #f1f1f1;" id="myHeader">
     sticky header
     {{-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sticky_header --}}
 
-    seng kudu onok
+    {{-- seng kudu onok
     - gambarr"
     - fasilitas populer
-    -
+    - --}}
 
+
+
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+        </script>
 </body>
-
-<script>
-    window.onscroll = function() {myFunction()};
-
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-      if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-      } else {
-        header.classList.remove("sticky");
-      }
-    }
-    </script>
-
 </html>
-
-

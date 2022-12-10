@@ -3,9 +3,12 @@
 use App\Http\Controllers\FasilitasHotelController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\loginController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +26,7 @@ Route::get('/', function () {
 });
 
 Route::get("/logout", function(){
-    return view("/login");
+    return view("/landingpage");
 });
 
 //Bagian register
@@ -39,8 +42,26 @@ Route::get('/login', function () {
 Route::post('/loginuser',[loginController::class, "loginAction"]);
 
 Route::get('/user', function () {
-    return view('user.homeuser');
+    // dd("anjay ggbet");
+
+    // dd(Session::get("userLog"));
+    $data = DB::table('kamar')->get();
+    $termurah = DB::table('kamar')->select(DB::raw('MIN(harga_kamar) as ht'))->first();
+
+    // dd($termurah);
+    return view("user.dashboard", ["kamar"=>$data ,"termurah"=>$termurah]);
+
+    // $users = DB::table('users')
+    //          ->select(DB::raw('count(*) as user_count, status'))
+    //          ->where('status', '<>', 1)
+    //          ->groupBy('status')
+    //          ->get();
 });
+
+Route::post('/pesan',[PesanController::class, "pilihkamar"]);
+Route::post("/pembayaran",[PesanController::class, "pembayaran"]);
+Route::post("/bayar", [PesanController::class, "bayar"]);
+Route::get("/riwayattransaksi",[UserController::class,"riwayatpesanan"]);
 
 
 Route::prefix("/admin")->group(function (){
