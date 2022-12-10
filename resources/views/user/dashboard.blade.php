@@ -30,7 +30,7 @@
                           Akun
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Profile</a>
+                          <a class="dropdown-item" href="/profile">Profile</a>
                           <a class="dropdown-item" href="/riwayattransaksi">Pesanan</a>
                           <a class="dropdown-item" href="{{url('/logout')}}">Logout</a>
 

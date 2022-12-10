@@ -17,6 +17,10 @@ class UserController extends Controller
         return view("admin.HMasterUser",["data"=> $data]);
     }
 
+    public function profile(){
+        return view("user.profile");
+    }
+
     public function riwayatpesanan(){
 
         $userLog = Session::get("userLog");

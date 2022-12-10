@@ -37,48 +37,26 @@
             </div>
         </div>
     </nav>
-    <br><br>
+
     <main class="page lanidng-page" style="background-color: white">
 
 
         <div style="width: 90%; padding: 100px" >
-            <h1>Pesanan</h1>
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">Order ID</th>
-                    <th scope="col">Nama Pemesan</th>
-                    <th scope="col">Kamar</th>
-                    <th scope="col">tanggal Check in</th>
-                    <th scope="col">tanggal check out</th>
-                    <th scope="col">jumlah kamar </th>
-                    <th scope="col">Total</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    @if (count($data)> 0)
 
-                    @for ($i = 0;$i < count($data);$i++)
-                    <tr>
-                        <td>{{$data[$i]->orderid}}</td>
-                        <td>{{$data[$i]->namapemesan}}</td>
-                        <td>{{$data[$i]->namakamar}}</td>
-                        <td>{{$data[$i]->checkin}}</td>
-                        <td>{{$data[$i]->checkout}}</td>
-                        <td>{{count($jumlah)}}</td>
-                        <td>{{$data[$i]->total}}</td>
-                    </tr>
+            <br>
+            <h1>Profil </h1>
+            <div style="width: 500px">
 
-                    @endfor
-                    @else
-                    <tr>
-                        <td colspan=7><center>Belum Ada Pesanan</center></td>
-                    </tr>
-                    @endif
+                <p><b>halo</b></p>
+                <input type="text" class="form-control">
+            </div>
+            <br><br>
+            <a href=""><button class="btn btn-danger">Edit Profil</button></a>
 
-                </tbody>
-              </table>
         </div>
+
+
+
 
     </main>
     {{-- <footer class="page-footer">
