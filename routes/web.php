@@ -42,6 +42,9 @@ Route::get('/login', function () {
 });
 Route::post('/loginuser',[loginController::class, "loginAction"]);
 
+// BAGIAN USER
+// =====================================================================================
+
 Route::get('/user', function () {
     // dd("anjay ggbet");
 
@@ -72,6 +75,11 @@ Route::post("/bayar", [PesanController::class, "bayar"]);
 
 //riwayat transaksi / pesanan user
 Route::get("/riwayattransaksi",[UserController::class,"riwayatpesanan"]);
+
+
+//================================================================================
+//akhir bagian user
+
 
 
 Route::prefix("/admin")->group(function (){
