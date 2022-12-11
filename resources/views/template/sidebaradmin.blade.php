@@ -25,25 +25,29 @@
                         </li> --}}
                         <li class="nav-item">
                             <a href="{{url('/admin/')}}" class="nav-link align-middle px-0">
-                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Dashboard</span>
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline" style="color: white">Dashboard</span>
                             </a>
                         </li>
 
                         <li class="nav-item">
                             <a href="{{url('/admin/MasterKamar')}}" class="nav-link px-0 align-middle ">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Kamar</span> </a>
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: white">Kamar</span> </a>
                         </li>
                         <li>
                             <a href="{{url('/admin/MasterFasilitas')}}" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Fasilitas</span> </a>
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: white">Fasilitas</span> </a>
                         </li>
                         <li>
                             <a href="{{url('/admin/MasterUser')}}" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Master User</span> </a>
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: white">Master User</span> </a>
                         </li>
                         <li>
-                            <a href="{{url('/admin/MasterUser')}}" class="nav-link px-0 align-middle">
-                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: black">Pesanan</span> </a>
+                            <a href="{{url('/admin/pesanan')}}" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: white">Pesanan</span> </a>
+                        </li>
+                        <li>
+                            <a href="{{url('/admin/laporanpendapatan')}}" class="nav-link px-0 align-middle">
+                                <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" style="color: white">Laporan Pendapatan</span> </a>
                         </li>
                         <li>
                             <a href="{{url('/logout')}}" class="nav-link px-0 align-middle">

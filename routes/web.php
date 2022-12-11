@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FasilitasHotelController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\loginController;
@@ -41,6 +42,9 @@ Route::get('/login', function () {
 });
 Route::post('/loginuser',[loginController::class, "loginAction"]);
 
+// BAGIAN USER
+// =====================================================================================
+
 Route::get('/user', function () {
     // dd("anjay ggbet");
 
@@ -58,32 +62,68 @@ Route::get('/user', function () {
     //          ->get();
 });
 
+//tampil profile
+Route::get("/profile", [UserController::class, "profile"]);
+
+//masuk halaman detail pemesanan
 Route::post('/pesan',[PesanController::class, "pilihkamar"]);
+
+//masuk halaman pembayaran
 Route::post("/pembayaran",[PesanController::class, "pembayaran"]);
+//bayar
 Route::post("/bayar", [PesanController::class, "bayar"]);
+
+//riwayat transaksi / pesanan user
 Route::get("/riwayattransaksi",[UserController::class,"riwayatpesanan"]);
 
 
-Route::prefix("/admin")->group(function (){
+//================================================================================
+//akhir bagian user
 
+
+
+Route::prefix("/admin")->group(function (){
+    //masuk dashboard admin
     Route::get("/", function(){
-        return view("admin.dashboard");
+
+        $dk = DB::table("no_kamar")->where("status_kamar",'=','terisi')->get();
+        $du = DB::table("users")->where("role",'=','1')->get();
+        $dp = DB::table("h_trans")->where("status_trans",'=','pending')->get();
+        return view("admin.dashboard",["kamarterisi" => $dk,"jumlahuser"=>$du,"jumlahtrans"=>$dp]);
         // return view("admin.HMasterKamar");
     });
+    //masuk halaman master kamar
     Route::get("/MasterKamar", [KamarController::class, "MasterKamar"]);
 
+
+    // masuk halaman tambah kamar
     Route::get("/HtambahKamar", function(){
         return view("admin.HtambahKamar");
     });
+    // tambah kamar
     Route::post("/tambahkamar",[KamarController::class, "tambahkamar"]);
+    //masuk detail kamar
     Route::get("/detailkamar/{id}", [KamarController::class, "DetailKamar"]);
-
+    // masuk halaman master fasilitas
     Route::get("/MasterFasilitas", [FasilitasHotelController::class, "MasterFasilitas"]);
+    //masuk halaman tambah fasilitas
     Route::get("/Htambahfasilitas", function(){
         return view("admin.HTambahFasilitas");
     });
+    //tambah fasilitas
     Route::post("/tambahfasilitas", [FasilitasHotelController::class, "tambahfasilitas"]);
+
     Route::get("/deletefasilitas/{id}", [FasilitasHotelController::class, "deletefasilitas"]);
 
     Route::get("/MasterUser", [UserController::class, "MasterUser"]);
+
+    //masuk halaman pesanan di admin
+    Route::get("pesanan",[AdminController::class, "pesanan"]);
+
+    Route::get("selesaikanpesanan/{id}",[AdminController::class, "selesaikanpesanan"]);
+
+    // laporan
+    Route::get("/laporanpendapatan",[AdminController::class , "laporanpendapatan"]);
+    Route::get("/Flaporanpendapatan",[AdminController::class , "Flaporanpendapatan"]);
+
 });

@@ -113,6 +113,8 @@ class PesanController extends Controller
         $ht->nama_pemesan = $datatamu->pemesan;
         $ht->nomor_pemesan = $datatamu->notelp;
         $ht->email = $datatamu->email;
+        $ht->status_trans = "pending";
+        $ht->tgltrans = now();
         $ht->save();
 
         $j = intval($datapesanan->jkamar);
