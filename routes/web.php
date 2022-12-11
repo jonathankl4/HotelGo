@@ -64,6 +64,8 @@ Route::get('/user', function () {
 
 //tampil profile
 Route::get("/profile", [UserController::class, "profile"]);
+//edit profile
+Route::post("/profile", [UserController::class,"editProfile"]);
 
 //masuk halaman detail pemesanan
 Route::post('/pesan',[PesanController::class, "pilihkamar"]);

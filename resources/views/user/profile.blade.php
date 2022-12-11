@@ -44,15 +44,22 @@
         <div style="width: 90%; padding: 100px" >
 
             <br>
-            <h1>Profil </h1>
-            <div style="width: 500px">
-
-                <p><b>halo</b></p>
-                <input type="text" class="form-control">
-            </div>
-            <br><br>
-            <a href=""><button class="btn btn-danger">Edit Profil</button></a>
-
+            <h1>Profile</h1>
+            <form action="" method="post">
+                @csrf
+                <div style="width: 500px">
+                    <p><b>Name: </b></p>
+                    <input type="text" value="{{$data->name}}" class="form-control" name="editName"> <br>
+                    <p><b>Old Password: </b></p>
+                    <input type="text" placeholder="old password" class="form-control" name="oldPass"> <br>
+                    <p><b>New Password: </b></p>
+                    <input type="text" placeholder="New password" class="form-control" name="newPass"> <br>
+                    <p><b>Confirm Password: </b></p>
+                    <input type="text" placeholder="Confirm password" class="form-control" name="cPass"> <br>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-danger">Edit Profil</button>
+            </form>
         </div>
 
 
