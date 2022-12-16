@@ -65,16 +65,16 @@
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Jemput</h4>
-                        <p class="text-muted">Bingung ke hotel gaada kendaraan ? , Santai</p>
+                        <h4 class="my-3">Fasilitas Lengkap</h4>
+                        <p class="text-muted">Fasilitas super lengkap untuk mu</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Pembayaran Mudah</h4>
-                        <p class="text-muted">Mau bayar gausah ribett , pakai Bank atau e-wallet kesukaan mu , semua bisa</p>
+                        <h4 class="my-3">Pembayaran Mudah dan aman</h4>
+                        <p class="text-muted">Mau bayar gausah ribett , pakai Bank atau e-wallet kesukaan mu , semua bisa dan tentunya aman</p>
                     </div>
                 </div>
             </div>
